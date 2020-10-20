@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body> 
+    
+
+    <div class="container my-5">
+        <center><h2>Recipes</h2></center>
+        <ul>
+        </ul>
+        <form>
+            <center><label for="recipe">Add new recipe:</label></center>
+            <br>
+            <center><div class="input-group"></center>
+                <center><input type="text" class="form-control" id="recipe" placeholder="Title" required></center>
+                <br>
+                <center><input type="text" class="form-control" id="body" placeholder="Body" required></center>
+                <br>
+                <center><input type="checkbox" class="form-control" id="important" placeholder="important"></center>
+                <br>
+                <center><div class="input-group-append"></center>
+                    <center><input type="submit" value="add" class="btn btn-outline-secondary"></center>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <body onload="create_unfinished_task(), create_finished_task()">
+        <div id="content_container">
+          <div id="finish_task_header">
+            <p> Finish Task. </p>
+          </div>
+    
+          <div id="task_input_container">
+            <input id="input_box" type="text" placeholder="Start A Task"/>
+            <input id="input_date" type="date"/>
+            <button id="input_button" onclick="add_task();">
+              Enter Task <i class="fa fa-arrow-circle-right"></i>
+            </button>
+          </div>
+    
+          <!-- Task To Do -->
+          <p class="header"> Task </p>
+          <div class="container">
+    
+    
+          </div>
+    
+    
+          <!-- Task Finished Yay -->
+          <p class="header"> Finished </p>
+          <div class="container">
+    
+            <div class="task_container">
+              <div id="task_data">
+                <p id="task_title" contenteditable="false"> Task Title 1 </p>
+                <p id="task_date" contenteditable="false"> Task Date 1 </p>
+              </div>
+            </div>
+            <div class="task_container">
+              <div id="task_data">
+                <p id="task_title" contenteditable="false"> Task Title 1 </p>
+                <p id="task_date" contenteditable="false"> Task Date 1 </p>
+              </div>
+            </div>
+            <div class="task_container">
+              <div id="task_data">
+                <p id="task_title" contenteditable="false"> Task Title 1 </p>
+                <p id="task_date" contenteditable="false"> Task Date 1 </p>
+              </div>
+            </div>
+    
+          </div>
+          <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCAlgsxO3lTMunpQLETRDcwLyefMgcxZt0",
+    authDomain: "recipes-71a42.firebaseapp.com",
+    databaseURL: "https://recipes-71a42.firebaseio.com",
+    projectId: "recipes-71a42",
+    storageBucket: "recipes-71a42.appspot.com",
+    messagingSenderId: "267025306829",
+    appId: "1:267025306829:web:8da98c28b05d50a73d8584",
+    measurementId: "G-F0NQ339X9C"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+  
+
+<script src="sandbox.js"></script>
+</body>
+</html>
